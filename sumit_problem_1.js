@@ -1,4 +1,7 @@
-// how many time use any sentence in paragraph and first time which index find  this sentence, return index number?   
+
+// How many time use any word in paragraph and first time which index find this word, also return index number?   
+
+
 
 const sentence = `Learn with Sumit is all about teaching web development skills and techniques in an 
                     efficient and practical manner. If you are just getting started in web development, 
@@ -7,7 +10,7 @@ const sentence = `Learn with Sumit is all about teaching web development skills 
                     Learn with Sumit also deep dives into advanced topics using  the latest best practices for you seasoned web developers. `;
 
 const matches = sentence.match(/sumit/gi);   //return array, g - global, i - case-sensitive
-console.log(matches);
+console.log(matches);   // ['Sumit', 'Sumit', 'Sumit']
 
 const occurances = matches.length;
 console.log(occurances);  // return 3
@@ -15,7 +18,9 @@ console.log(occurances);  // return 3
 
 
 
-// ------------ if user search a name and if this name is not exist an array what happen ------------
+
+
+// ------------ If user search a name and this name is not exist in array what happen ------------
 // try some error handing
 
 
@@ -27,7 +32,8 @@ const sentence1 = `Learn with Sumit is all about teaching web development skills
 
 const matches1 = sentence1.match(/sumits/gi);   //return array, g - global, i - case-sensitive
 const occurances1 = matches1 ? matches.length : 0;    // if any word match, then return this match length otherwise return 0
-console.log(occurances1);
+
+console.log(occurances1);   // if not found return 0
 
 
 
@@ -40,4 +46,4 @@ console.log(occurances1);
 let position = sentence.search(/sumit/i);
 position = position >= 0 ? position : "not found!";  
 
-console.log(position);  
+console.log(position);  // return 11
