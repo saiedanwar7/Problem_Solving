@@ -79,3 +79,4 @@ function occ(str) {
 
 
 console.log(occ("apple"));
+console.log(occ("banana"));
