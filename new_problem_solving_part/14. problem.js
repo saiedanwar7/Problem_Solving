@@ -9,18 +9,18 @@
 
 
 
-//------------- shortcut way --------------
+//1. ------------- using spread operator--------------
 
-// function cloneArr(arr){
-//     return [...arr];
-// }
+function cloneArr(arr){
+    return [...arr];
+}
 
-// // cloneArr([1, 2, 3, 4, 5])
-// var newarr = cloneArr([1, 2, 3, 4, 5]);
-// console.log(newarr);
+// cloneArr([1, 2, 3, 4, 5])
+var newarr = cloneArr([1, 2, 3, 4, 5]);
+console.log(newarr);
 
 
-//-------------- use forEach -----------------
+//-------------- Using forEach -----------------
 
 function cloneArr1 (arr) {
     var newarr = [];
@@ -44,3 +44,13 @@ console.log(myNewArray); [1, 2, 3, 4]
 console.log(abc);
 
 
+//------------------------- using Map - map return new array -----------------
+
+function cloneArr2(arr){
+    return arr.map(function (e) {
+        return e;
+    })
+}
+
+var newArray = cloneArr2([1, 2, 3, 4, 5, 10]);
+console.log(newArray);
